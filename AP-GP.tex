@@ -1,15 +1,17 @@
 \documentclass{article}
 \usepackage{amsmath}
 \usepackage{geometry}
-\geometry{top=0.5in}
+\usepackage{cite}
+\geometry{top=0.5in, bottom=0.5in}
 \title{Arithmetic Progression}
 \date{}
 \begin{document}
+\bibliographystyle{plain}
 \pagenumbering{gobble}
 \maketitle
 \date{}
 \section*{Definition}
-An \textbf{arithmetic progression (AP) or arithmetic sequence} is a sequence of numbers such that the difference between the consecutive terms is constant. For instance, the sequence 3, 6, 9, 12, 15 … is an arithmetic progression with common difference of 3.\newline
+An \textbf{arithmetic progression (AP) or arithmetic sequence ~\cite{ap-wiki}} is a sequence of numbers such that the difference between the consecutive terms is constant. For instance, the sequence 3, 6, 9, 12, 15 … is an arithmetic progression with common difference of 3.\newline
 If the initial term of an arithmetic progression is ${a_1}$ and the common difference of successive members is $d$, then the nth term of the sequence ${a_n}$ is given by:
 \begin{equation*}
 a_n = a_1 + (n - 1)d,
@@ -55,13 +57,9 @@ S_n=\frac{n}{2}[ 2a_1 + (n-1)d]
 {\LARGE Geometric Progression}
 \end{center}
 \section*{Definition}
- A \textbf{geometric progression}, also known as a \textbf{geometric sequence}, is a sequence of numbers where each term after the first is found by multiplying the previous one by a fixed, non-zero number called the \textbf{common ratio}.\newline
-For example, the sequence 2, 4, 8, 16, ... is a geometric progression with common ratio 2. Similarly 20, 10, 5, 2.5, 1.25, ... is a geometric sequence with common ratio 1/2.\newline
-Examples of a geometric sequence are powers $r^k$ of a fixed number $r$, such as $2^k$ and $3^k$. The general form of a geometric sequence is
-\begin{equation*}
-a,\ ar,\ ar^2,\ ar^3,\ ar^4,\ \ldots
-\end{equation*}
-where $r \ne$ 0 is the common ratio and $a$ is a scale factor, equal to the sequence's start value.\newline
+ A \textbf{geometric progression} or \textbf{geometric sequence}~\cite{{gp-wiki}}, is a sequence of numbers where each term after the first is found by multiplying the previous one by a fixed, non-zero number called the \textbf{common ratio}.\newline
+For example, the sequence 2, 4, 8, 16, ... is a geometric progression with common ratio 2. \newline
+Examples of a geometric sequence are powers $r^k$ of a fixed number $r$, such as $2^k$ and $3^k$. \\
 The n-th term of a geometric sequence with initial value $a$ and common ratio $r$ is given by
 \begin{equation*}
 a_n = a\,r^{n-1}
@@ -99,4 +97,6 @@ since all the other terms cancel. If $r \ne$ 1, we can rearrange the above to ge
 \begin{gather*}
 \sum_{k=1}^{n} ar^{k-1} = \frac{a(1-r^n)}{1-r}
 \end{gather*} 	
+\bibliography{cite}
+\bibliographystyle{plain}
 \end{document}
