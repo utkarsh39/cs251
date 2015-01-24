@@ -9,8 +9,8 @@
 \maketitle
 \date{}
 \section*{Definition}
-An \textbf{arithmetic progression (AP) or arithmetic sequence} is a sequence of numbers such that the difference between the consecutive terms is constant. For instance, the sequence 3,6,9,12,15 … is an arithmetic progression with common difference of 3.\newline
-If the initial term of an arithmetic progression is ${a_1}$ and the common difference of successive members is $d$, then the $n$th term of the sequence ${a_n}$ is given by:
+An \textbf{arithmetic progression (AP) or arithmetic sequence} is a sequence of numbers such that the difference between the consecutive terms is constant. For instance, the sequence 3, 6, 9, 12, 15 … is an arithmetic progression with common difference of 3.\newline
+If the initial term of an arithmetic progression is ${a_1}$ and the common difference of successive members is $d$, then the nth term of the sequence ${a_n}$ is given by:
 \begin{equation*}
 a_n = a_1 + (n - 1)d,
 \end{equation*}
@@ -21,10 +21,14 @@ a_n = a_m + (n - m	)d,
 \section*{Sum}	
 The sum of the members of a finite arithmetic progression is called an \textbf{arithmetic series}. For example, consider the sum:
 3 + 6 + 9 + 12 + 15 + 18.
-This sum can be found quickly by taking the number n of terms being added (here 6), multiplying by the sum of the first and last number in the progression (here 3 + 18 = 21), and dividing by 2:\newline
-$\frac{n(a_1 + a_n)}{2}$\newline
+This sum can be found quickly by taking the number $n$ of terms being added (here 6), multiplying by the sum of the first and last number in the progression (here 3 + 18 = 21), and dividing by 2:\newline
+\begin{equation*}
+\frac{n(a_1 + a_n)}{2}
+\end{equation*}\newline
 In the case above, this gives the equation:\newline
-3 + 6 + 9 + 12 + 15 + 18 = $\frac{6(3 + 18)}{2} = \frac{6 \times 21}{2} =$ 40.
+\begin{equation*}
+3 + 6 + 9 + 12 + 15 + 18 = \frac{6(3 + 18)}{2} = \frac{6 \times 21}{2} = 40
+\end{equation*}
 \section*{Derivation}
 To derive the above formula, begin by expressing the arithmetic series in two different ways:
 \begin{align*}
@@ -53,18 +57,46 @@ S_n=\frac{n}{2}[ 2a_1 + (n-1)d]
 \section*{Definition}
  A \textbf{geometric progression}, also known as a \textbf{geometric sequence}, is a sequence of numbers where each term after the first is found by multiplying the previous one by a fixed, non-zero number called the \textbf{common ratio}.\newline
 For example, the sequence 2, 4, 8, 16, ... is a geometric progression with common ratio 2. Similarly 20, 10, 5, 2.5, 1.25, ... is a geometric sequence with common ratio 1/2.\newline
-Examples of a geometric sequence are powers $r^k$ of a fixed number $r$, such as $2^k$ and $3^k$. The general form of a geometric sequence is\\
-$a,\ ar,\ ar^2,\ ar^3,\ ar^4,\ \ldots$\\
+Examples of a geometric sequence are powers $r^k$ of a fixed number $r$, such as $2^k$ and $3^k$. The general form of a geometric sequence is
+\begin{equation*}
+a,\ ar,\ ar^2,\ ar^3,\ ar^4,\ \ldots
+\end{equation*}
 where $r \ne$ 0 is the common ratio and $a$ is a scale factor, equal to the sequence's start value.\newline
-The $n$-th term of a geometric sequence with initial value $a$ and common ratio $r$ is given by\\
-$a_n = a\,r^{n-1}.$\\
-Such a geometric sequence also follows the recursive relation\\
-$a_n = r\,a_{n-1}$ for every integer $n\geq 1$.
+The n-th term of a geometric sequence with initial value $a$ and common ratio $r$ is given by
+\begin{equation*}
+a_n = a\,r^{n-1}
+\end{equation*}
+Such a geometric sequence also follows the recursive relation
+\begin{equation*}
+a_n = r\,a_{n-1}
+\end{equation*}
+ for every integer $n\geq$ 1.
+
 \section*{Sum}
 The sum of the members of a geometric progression is called an \textbf{geometric series}. For example, consider the sum:
 2 + 4 + 8 + 16 + 32.
 The sum can be found out by\newline
-$\frac{a(1-r^m)}{1-r}$ where a is the first term (here 2), m is the number of terms (here 5), and r is the common ratio (here 2).
+\begin{equation*}
+\frac{a(1-r^m)}{1-r}
+\end{equation*} 
+where $a$ is the first term (here 2), $m$ is the number of terms (here 5), and $r$ is the common ratio (here 2).
 In the example above, this gives:
-2 + 4 + 8 + 16 + 32 = $\frac{2(1-2^5)}{1-2} = \frac{-62}{-1}$ = 62.	
+2 + 4 + 8 + 16 + 32 = $\frac{2(1-2^5)}{1-2} = \frac{-62}{-1}$ = 62.
+
+\section*{Derivation}
+To derive this formula, first write a general geometric series as:
+\begin{equation*}
+\sum_{k=1}^{n} ar^{k-1} = ar^0+ar^1+ar^2+ar^3+\cdots+ar^{n-1}
+\end{equation*} 
+We can find a simpler formula for this sum by multiplying both sides of the above equation by $1 - r$, and we'll see that
+\begin{align*}
+(1-r) \sum_{k=1}^{n} ar^{k-1} & = (1-r)(ar^0 + ar^1+ar^2+ar^3+\cdots+ar^{n-1}) \\
+ & = ar^0 + ar^1+ar^2+ar^3+\cdots+ar^{n-1} \\
+ & \hspace{28pt} - ar^1-ar^2-ar^3-\cdots-ar^{n-1} - ar^n \\
+ & = a - ar^n
+\end{align*}
+since all the other terms cancel. If $r \ne$ 1, we can rearrange the above to get the convenient formula for a geometric series that computes the sum of n terms:\\
+\begin{gather*}
+\sum_{k=1}^{n} ar^{k-1} = \frac{a(1-r^n)}{1-r}
+\end{gather*} 	
 \end{document}
