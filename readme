@@ -1,0 +1,6 @@
+IMORTANT
+Change the location of image in resume.tex to preview the image
+To view the citation run the following commands on terminal 
+    pdflatex AP-GP
+    bibtex AP-GP
+Then view the pdf
