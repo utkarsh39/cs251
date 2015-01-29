@@ -1,0 +1,5 @@
+IMORTANT
+To view the citation run the following commands on terminal 
+    pdflatex AP-GP
+    bibtex AP-GP
+Then view the pdf

@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{cite}
+\geometry{top=0.5in, bottom=0.5in}
+\title{Arithmetic Progression}
+\date{}
+\begin{document}
+\bibliographystyle{plain}
+\pagenumbering{gobble}
+\maketitle
+\date{}
+\section*{Definition}
+An \textbf{arithmetic progression (AP) or arithmetic sequence ~\cite{ap-wiki}} is a sequence of numbers such that the difference between the consecutive terms is constant. For instance, the sequence 3, 6, 9, 12, 15 … is an arithmetic progression with common difference of 3.\newline
+If the initial term of an arithmetic progression is ${a_1}$ and the common difference of successive members is $d$, then the nth term of the sequence ${a_n}$ is given by:
+\begin{equation*}
+a_n = a_1 + (n - 1)d,
+\end{equation*}
+and in general
+\begin{equation*}
+a_n = a_m + (n - m	)d,
+\end{equation*}
+\section*{Sum}	
+The sum of the members of a finite arithmetic progression is called an \textbf{arithmetic series}. For example, consider the sum:
+3 + 6 + 9 + 12 + 15 + 18.
+This sum can be found quickly by taking the number $n$ of terms being added (here 6), multiplying by the sum of the first and last number in the progression (here 3 + 18 = 21), and dividing by 2:\newline
+\begin{equation*}
+\frac{n(a_1 + a_n)}{2}
+\end{equation*}\newline
+In the case above, this gives the equation:\newline
+\begin{equation*}
+3 + 6 + 9 + 12 + 15 + 18 = \frac{6(3 + 18)}{2} = \frac{6 \times 21}{2} = 40
+\end{equation*}
+\section*{Derivation}
+To derive the above formula, begin by expressing the arithmetic series in two different ways:
+\begin{align*}
+ S_n &= a_1 + (a_1+d) + (a_1+2d) + \cdots + (a_1+(n-2)d) + (a_1+(n-1)d)\\
+ S_n &=(a_n-(n-1)d)+(a_n-(n-2)d)+\cdots+(a_n-2d)+(a_n-d)+a_n
+\end{align*}
+Adding both sides of the two equations, all terms involving $d$ cancel:
+\begin{equation*}
+\ 2S_n=n(a_1 + a_n)
+\end{equation*}
+Dividing both sides by 2 produces a common form of the equation:
+\begin{equation*}
+ S_n=\frac{n}{2}( a_1 + a_n)
+ \end{equation*}
+An alternate form results from re-inserting the substitution: $ a_n = a_1 + (n-1)d\\ $
+\begin{gather*}
+S_n=\frac{n}{2}[ 2a_1 + (n-1)d]
+\end{gather*}
+
+\newpage
+
+\begin{center}
+\vspace{100pt}
+{\LARGE Geometric Progression}
+\end{center}
+\section*{Definition}
+ A \textbf{geometric progression} or \textbf{geometric sequence}~\cite{{gp-wiki}}, is a sequence of numbers where each term after the first is found by multiplying the previous one by a fixed, non-zero number called the \textbf{common ratio}.\newline
+For example, the sequence 2, 4, 8, 16, ... is a geometric progression with common ratio 2. \newline
+Examples of a geometric sequence are powers $r^k$ of a fixed number $r$, such as $2^k$ and $3^k$. \\
+The n-th term of a geometric sequence with initial value $a$ and common ratio $r$ is given by
+\begin{equation*}
+a_n = a\,r^{n-1}
+\end{equation*}
+Such a geometric sequence also follows the recursive relation
+\begin{equation*}
+a_n = r\,a_{n-1}
+\end{equation*}
+ for every integer $n\geq$ 1.
+
+\section*{Sum}
+The sum of the members of a geometric progression is called an \textbf{geometric series}. For example, consider the sum:
+2 + 4 + 8 + 16 + 32.
+The sum can be found out by\newline
+\begin{equation*}
+\frac{a(1-r^m)}{1-r}
+\end{equation*} 
+where $a$ is the first term (here 2), $m$ is the number of terms (here 5), and $r$ is the common ratio (here 2).
+In the example above, this gives:
+2 + 4 + 8 + 16 + 32 = $\frac{2(1-2^5)}{1-2} = \frac{-62}{-1}$ = 62.
+
+\section*{Derivation}
+To derive this formula, first write a general geometric series as:
+\begin{equation*}
+\sum_{k=1}^{n} ar^{k-1} = ar^0+ar^1+ar^2+ar^3+\cdots+ar^{n-1}
+\end{equation*} 
+We can find a simpler formula for this sum by multiplying both sides of the above equation by $1 - r$, and we'll see that
+\begin{align*}
+(1-r) \sum_{k=1}^{n} ar^{k-1} & = (1-r)(ar^0 + ar^1+ar^2+ar^3+\cdots+ar^{n-1}) \\
+ & = ar^0 + ar^1+ar^2+ar^3+\cdots+ar^{n-1} \\
+ & \hspace{28pt} - ar^1-ar^2-ar^3-\cdots-ar^{n-1} - ar^n \\
+ & = a - ar^n
+\end{align*}
+since all the other terms cancel. If $r \ne$ 1, we can rearrange the above to get the convenient formula for a geometric series that computes the sum of n terms:\\
+\begin{gather*}
+\sum_{k=1}^{n} ar^{k-1} = \frac{a(1-r^n)}{1-r}
+\end{gather*} 	
+\bibliography{cite}
+\bibliographystyle{plain}
+\end{document}
