@@ -1,4 +1,4 @@
-all: dvi pdf 
+all: dvi pdf clean
 
 dvi: AP-GP.tex cite.bib
 	latex AP-GP.tex
