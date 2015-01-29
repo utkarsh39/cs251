@@ -1,6 +1,9 @@
-all: dvi pdf
+all: dvi pdf 
 
-dvi: AP-GP.tex
+dvi: AP-GP.tex cite.bib
+	latex AP-GP.tex
+	bibtex AP-GP
+	latex AP-GP.tex
 	latex AP-GP.tex
 
 pdf: AP-GP.tex cite.bib
@@ -8,3 +11,9 @@ pdf: AP-GP.tex cite.bib
 	bibtex AP-GP
 	pdflatex AP-GP
 	pdflatex AP-GP
+clean:
+	rm *aux
+	rm *bbl
+	rm *blg
+	rm *log
+	rm *out
