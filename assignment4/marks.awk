@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 
-BEGIN{ FS = "|"; OFS="|"; ORS="|  " }   
+BEGIN{ FS = "|"; OFS="|"; ORS="  |  " }   
 {print $0}
 {tot=0
  
@@ -28,35 +28,35 @@ BEGIN{ FS = "|"; OFS="|"; ORS="|  " }
   printf "%d \n",tot
 
 }END{
-    printf("max\t|     | ")
+    printf("max\t\b|       |")
     for(i=3;i<=NF;i++)
-	printf(" %d\t| ",max[i])
+	printf(" %d\t|",max[i])
     printf(" %d\t ",max[i])
     printf("\n")
 
-     printf("min\t|     | ")
+     printf("min\t\b|       |")
     for(i=3;i<=NF;i++)
-	printf(" %d\t| ",min[i])
+	printf(" %d\t|",min[i])
     printf(" %d\t ",min[i])
     printf("\n")
 
-    printf("mean\t|     | ")
+    printf("mean\t\b|       |")
     for(i=3;i<=NF;i++)
     {
 	mean[i]=sum[i]/NR
-	printf(" %.3f\t| ",mean[i])
+	printf(" %.2f\t|",mean[i])
     }
     mean[i]=sum[i]/NR
-    printf(" %.3f\t",mean[i])
+    printf(" %.2f\t",mean[i])
     printf("\n")
 
-    printf("sd\t|     | ")
+    printf("sd\t\b|       |")
     for(i=3;i<=NF;i++)
     {
-	sd[i]=sum2[i]-2*mean[i]*sum[i]+NR*mean[i]*mean[i]
-	printf(" %.3f\t| ",sd[i])
+	sd[i]=sqrt((sum2[i]-mean[i]*sum[i])/NR)
+	printf(" %.2f\t|",sd[i])
     }
-    sd[i]=sum2[i]-2*mean[i]*sum[i]+NR*mean[i]*mean[i]
-    printf(" %.3f\t",sd[i])
+    sd[i]=sqrt((sum2[i]-mean[i]*sum[i])/NR)
+    printf(" %.2f\t",sd[i])
     printf("\n")
 }
