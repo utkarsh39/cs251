@@ -4,7 +4,7 @@ p=0.3;
 
 t=(1-p)^n;
 file_id = fopen('bin.data', 'w');
-for i=0:49
+for i=0:50
 	pmf(i+1)=t;
         t=t*((n-i-1)*p)/((i+2)*(1-p));
        
