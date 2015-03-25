@@ -10,7 +10,7 @@ set xtic auto                          # set xtics automatically
 set ytic auto                          # set ytics automatically
 set label "np = 15" at 15,0.102 font ",10"
 set label "{/Symbol l} = 15" at 15,0.12 font "Symbol,10"
-set label "{/Symbol m} = 15" at 15,0.118 font "Symbol,10"
+set label "{/Symbol m} = 15" at 15,0.125 font "Symbol,10"
 set title "Probability Distributions"
 set ylabel "Probability Mass Function"
 set xlabel "k"

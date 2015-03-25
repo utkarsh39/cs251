@@ -1,0 +1,15 @@
+n=50;
+p=0.3;
+sample3=1000
+sample4=10000
+sample5=100000
+sample6=1000000
+num=binornd(50,0.3,1,sample);
+file_id = fopen('bin5.data', 'w');
+for i=1:sample
+	pmf(i)=binopdf(num(i),n,p);
+        
+       
+fprintf(file_id,'%e\t%e\n',num(i),pmf(i));
+endfor
+
