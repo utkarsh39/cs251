@@ -1,13 +1,18 @@
+set multiplot
+#set terminal pngcairo size 850,862 enhanced font 'Verdana,20'
+#set output 'Probability Distributions.png'
+set term postscript eps enhanced color 24
 
-set terminal pngcairo size 850,862 enhanced font 'Verdana,20'
-set output 'normal.png'
+set output 'graph.eps'
 set   autoscale                        # scale axes automatically
-set logscale y
+unset log			       # remove log scaling
 unset label                            # remove any previous labels
 set xtic auto                          # set xtics automatically
 set ytic auto                          # set ytics automatically
 
-set title "Normal Distribution"
+set title "Probability Distributions"
 set ylabel "Probability Mass Function"
 set xlabel "k"
 plot "normal.data"
+plot "bin.data"
+plot "poisson.data"
