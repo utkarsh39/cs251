@@ -8,11 +8,11 @@ unset log			       # remove log scaling
 unset label                            # remove any previous labels
 set xtic auto                          # set xtics automatically
 set ytic auto                          # set ytics automatically
-set label "np = 15" at 15.5,0.102 font ",10"
-set label "{/Symbol l} = 15" at 15,0.128 font "Symbol,10"
-set label "{/Symbol m} = 15" at 15,0.124 font "Symbol,10"
+set label "np = 15" at 15,0.005 font ",10"
+set label "{/Symbol l} = 15" at 15,0.010 font "Symbol,10"
+set label "{/Symbol m} = 15" at 15,0.015 font "Symbol,10"
 set title "Probability Distributions"
 set ylabel "Probability Mass Function"
-set xlabel "k"
- set key top right title 'Legend' 
+set xlabel "x"
+ set key top right 
 plot "normal.data" w lp title "Normal Distribution", "bin.data" w lp title "Binomial Distribution", "poisson.data" w lp title "Poisson Distribution"
