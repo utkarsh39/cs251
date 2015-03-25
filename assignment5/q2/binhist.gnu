@@ -20,15 +20,16 @@ unset log
 set xtic auto
 set ytic auto
 
-#set boxwidth 0.5
+set boxwidth 1
 
 set style fill solid 0.25
 set style fill pattern border
 set style fill pattern 2
 
 set style data histograms
-#set style histogram columnstacked
+set style histogram columnstacked
 
 #plot 'data' u 1:2 title "Func" w boxes
 #plot 'data' u 1:2 title "Square" w boxes lt 2 fs pattern 1, 'data' u 1:3 title "Cube" w boxes lt 3 fs pattern 2
-plot 'bin3.data' u 1:2 # u 1:3 title "Cube" w boxes, 'data' u 1:2 title "Square" w boxes
+plot 'binu.data' #u 1:2 # u 1:3 title "Cube" w boxes, 'data' u 1:2 title "Square" w boxes
+

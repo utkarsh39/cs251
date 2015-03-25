@@ -1,0 +1,36 @@
+n=50;
+l=15;
+
+
+sample3=1000
+sample4=10000
+sample5=100000
+sample6=1000000
+
+
+num3=poissrnd(l,sample3);
+num4=poissrnd(l,sample4);
+num5=poissrnd(l,sample5);
+num6=poissrnd(l,sample6);
+
+file_id3= fopen('poiss3.data', 'w');
+file_id4= fopen('poiss4.data', 'w');
+file_id5= fopen('poiss5.data', 'w');
+file_id6= fopen('poiss6.data', 'w');
+
+for i=1:sample3
+	pmf(i)=poisspdf(num3(i),l);
+        fprintf(file_id3,'%e\t%e\n',num3(i),pmf(i));
+endfor
+for i=1:sample4
+	pmf(i)=poisspdf(num4(i),l);
+        fprintf(file_id4,'%e\t%e\n',num4(i),pmf(i));
+endfor
+for i=1:sample5
+	pmf(i)=poisspdf(num5(i),l);
+        fprintf(file_id5,'%e\t%e\n',num5(i),pmf(i));
+endfor
+for i=1:sample6
+	pmf(i)=poisspdf(num6(i),l);
+        fprintf(file_id6,'%e\t%e\n',num6(i),pmf(i));
+endfor
