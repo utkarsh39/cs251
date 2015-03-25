@@ -1,0 +1,26 @@
+#!/usr/bin/gnuplot
+
+set term postscript eps enhanced 24
+set output 'bin4.eps'
+set title "Binomial Distribution"
+set key top left
+
+set xrange [0:50]
+#set yrange [0:3]
+
+#set logscale y
+#set nologscale x
+
+set xtics auto
+set ytics auto
+
+#set boxwidth 0.5
+
+#set style fill solid 0.25
+set style fill pattern border
+#set style fill pattern 2
+
+#set style data histograms
+#set style histogram columnstacked
+
+plot 'bin4.data' u 1:2 

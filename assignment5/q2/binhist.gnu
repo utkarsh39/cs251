@@ -1,35 +1,39 @@
 #!/usr/bin/gnuplot
 
 set term postscript eps enhanced 24
-
-set output 'histogram.eps'
-
-set title "Histograms"
-
 set key top left
 
 set xrange [0:50]
 #set yrange [0:3]
 
-unset log
+#unset log
 #set nologscale x
 
-#unset xtics
-#unset ytics
+set xtics auto
+set ytics auto
 
-set xtic auto
-set ytic auto
+#set boxwidth 1
 
-set boxwidth 1
-
-set style fill solid 0.25
+#set style fill solid 0.25
 set style fill pattern border
-set style fill pattern 2
+#set style fill pattern 2
 
-set style data histograms
-set style histogram columnstacked
+#set style data histograms
+#set style histogram columnstacked
 
-#plot 'data' u 1:2 title "Func" w boxes
-#plot 'data' u 1:2 title "Square" w boxes lt 2 fs pattern 1, 'data' u 1:3 title "Cube" w boxes lt 3 fs pattern 2
-plot 'binu.data' #u 1:2 # u 1:3 title "Cube" w boxes, 'data' u 1:2 title "Square" w boxes
 
+set output 'bin3.eps'
+set title "Binomial Distribution  of sample 1000"
+plot 'bin3.data' u 1:2 title "" w boxes
+
+set output 'bin4.eps'
+set title "Binomial Distribution  of sample 10000"
+plot 'bin4.data' u 1:2 title "" w boxes
+
+set output 'bin5.eps'
+set title "Binomial Distribution  of sample 100000"
+plot 'bin5.data' u 1:2 title "" w boxes
+
+set output 'bin6.eps'
+set title "Binomial Distribution  of sample 1000000"
+plot 'bin6.data' u 1:2 title "" w boxes
