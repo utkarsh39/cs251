@@ -14,5 +14,5 @@ set label "{/Symbol m} = 15" at 15,0.124 font "Symbol,10"
 set title "Probability Distributions"
 set ylabel "Probability Mass Function"
 set xlabel "k"
- set key top right title 'Legend' 
+ set key top right Left title 'Legend' 
 plot "normal.data" w lp title "Normal Distribution", "bin.data" w lp title "Binomial Distribution", "poisson.data" w lp title "Poisson Distribution"
