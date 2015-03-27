@@ -28,12 +28,12 @@ plot 'bin3.data' u 1:2 title "" w boxes
 
 set output 'bin4.eps'
 set title "Binomial Distribution  of sample 10000"
-plot 'bin4.data' u 1:2 title "Cube" w boxes
+plot 'bin4.data' u 1:2 title "" w boxes
 
 set output 'bin5.eps'
 set title "Binomial Distribution  of sample 100000"
-plot 'bin5.data' u 1:2 title "Cube" w boxes
+plot 'bin5.data' u 1:2 title "" w boxes
 
 set output 'bin6.eps'
 set title "Binomial Distribution  of sample 1000000"
-plot 'bin6.data' u 1:2 title "Cube" w boxes
+plot 'bin6.data' u 1:2 title "" w boxes

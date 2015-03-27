@@ -21,8 +21,6 @@ set style fill pattern border
 #set style data histograms
 #set style histogram columnstacked
 
-set ylabel "Frequency"
-set xlabel "x"
 
 set output 'norm3.eps'
 set title "Normal Distribution  of sample 1000"

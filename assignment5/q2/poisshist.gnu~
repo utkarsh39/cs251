@@ -20,7 +20,7 @@ set style fill pattern border
 
 #set style data histograms
 #set style histogram columnstacked
-set ylabel "Frequency"
+set ylabel "Probability Mass Function"
 set xlabel "x"
 
 set output 'poiss3.eps'

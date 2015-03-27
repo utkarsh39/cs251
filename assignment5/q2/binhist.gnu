@@ -20,7 +20,8 @@ set style fill pattern border
 
 #set style data histograms
 #set style histogram columnstacked
-
+set ylabel "Frequency"
+set xlabel "x"
 
 set output 'bin3.eps'
 set title "Binomial Distribution  of sample 1000"
