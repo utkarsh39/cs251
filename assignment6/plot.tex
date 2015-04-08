@@ -7,7 +7,10 @@
 \begin{tikzpicture}
 
  \begin{axis}[
-     width=15cm, height=20cm,
+     axis lines=left,
+     xlabel=$n$,
+     ylabel=$Probability$,
+     width=15cm, height=18cm,
      %samples=50,
     % domain=0:5, xmax=50.5,
      %restrict y to domain=0:0.14,
@@ -18,7 +21,12 @@
      xtick={0,5,...,50},
      % ytick={0.00,0.02,...,0.14},
     ]
-   \addplot table [id=exp]{bin.data};
+   \addplot  [color=red,mark=square] table {bin.data};
+   \addlegendentry{$Binomial$}
+   \addplot  [color=orange,mark=star] table{poisson.data};
+   \addlegendentry{$Poisson$}
+   \addplot  [color=green,mark=halfcircle*] table{normal.data};
+   \addlegendentry{$Normal$}
 % \draw[<->] (0,0) -- (50,0) node [right] {$x$};
  %\draw[<->] (0,0) -- (0,0.2)  node [above] {$f_2(x)$};
  %\draw[color=red] plot file {bin.data}; %node [right] {$f(x) = x$};
