@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\usepackage{tikz} % To generate the plot from csv
+
+
+\begin{document}
+\begin{tikzpicture}
+
+ \begin{axis}[
+     width=15cm, height=20cm,
+     %samples=50,
+    % domain=0:5, xmax=50.5,
+     %restrict y to domain=0:0.14,
+     xmin=0,
+     xmax=50,
+     ymin=0,
+     ymax=0.14,
+     xtick={0,5,...,50},
+     % ytick={0.00,0.02,...,0.14},
+    ]
+   \addplot table [id=exp]{bin.data};
+% \draw[<->] (0,0) -- (50,0) node [right] {$x$};
+ %\draw[<->] (0,0) -- (0,0.2)  node [above] {$f_2(x)$};
+ %\draw[color=red] plot file {bin.data}; %node [right] {$f(x) = x$};
+\end{axis}
+\end{tikzpicture}
+\end{document}

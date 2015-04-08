@@ -1,0 +1,13 @@
+\documentclass{article}
+
+\usepackage{tikz} % To generate the plot from csv
+
+
+\begin{document}
+\begin{tikzpicture}[domain=0:50][scale=5.0]
+ \draw[<->] (0,0) -- (50,0) node [right] {$x$};
+ \draw[<->] (0,0) -- (0,0.2)  node [above] {$f_2(x)$};
+ \draw[color=red] plot file {bin.data}; %node [right] {$f(x) = x$};
+
+\end{tikzpicture}
+\end{document}
