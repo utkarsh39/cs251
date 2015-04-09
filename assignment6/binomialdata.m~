@@ -8,6 +8,6 @@ for i=0:50
 	pmf(i+1)=binopdf(i,n,p);
         
        
-fprintf(file_id,'%i\t%e\n',i,pmf(i+1));
+fprintf(file_id,'%i,%f\n',i,pmf(i+1));
 endfor
 

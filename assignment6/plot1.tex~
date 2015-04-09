@@ -1,0 +1,24 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage{datatool,tikz,filecontents}
+\begin{filecontents*}{coord1.dat}
+x,y
+0,0
+1,1
+2,2
+\end{filecontents*}
+\begin{filecontents*}{coord2.dat}
+x,y
+0,1
+1,2
+2,3
+\end{filecontents*}
+\DTLloaddb[noheader=false]{coordinates1}{coord1.dat}
+\DTLloaddb[noheader=false]{coordinates2}{coord2.dat}
+
+\begin{document}
+\begin{tikzpicture}
+\DTLforeach*{coordinates1}{\xA=x, \yA=y}{%
+  \DTLforeach*{coordinates2}{\xB=x, \yB=y}{
+     \draw [-latex] (\xA,\yA) node[below]{\xA,\yA} -- (\xB,\yB) node[above]{\xB,\yB};}}
+\end{tikzpicture}
+\end{document}

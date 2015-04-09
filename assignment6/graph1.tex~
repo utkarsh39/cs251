@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+\usepackage{tikz}
+
+\usetikzlibrary{positioning, arrows,automata}
+\usetikzlibrary{shapes}
+\usepackage{dot2texi}
+\begin{document}
+
+\begin{dot2tex}[neato,mathmode]
+  digraph G {
+    node[shape=circle];
+    a1 -- a2 -- a3 -- a4 -- a1 ;
+    a1 -- a3;
+  }
+\end{dot2tex}
+\end{document}

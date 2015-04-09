@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+\usepackage{tikz}
+
+\usetikzlibrary{positioning, arrows,automata}
+\usetikzlibrary{shapes}
+\usepackage{dot2texi}
+\begin{document}
+
+\section {K5}
+
+\begin{tikzpicture}
+\tikzstyle{every state}=[shape=circle, draw=black!50, very thick, fill=blue!10];
+
+\begin{dot2tex}[neato,mathmode]
+  graph G {
+    node[style="state"];
+    a_1 -- a_2
+    a_1 -- a_3
+    a_1 -- a_4
+    a_1 -- a_5
+
+    a_2 -- a_3
+    a_2 -- a_4
+    a_2 -- a_5
+    a_3 -- a_4
+    a_3 -- a_5
+
+    a_4 -- a_5
+  }
+\end{dot2tex}
+\end{tikzpicture}
+
+\section {K3,3}
+\begin{tikzpicture}
+\tikzstyle{every state}=[shape=circle, draw=black!50, very thick, fill=blue!10];
+  
+\begin{dot2tex}[styleonly,codeonly, mathmode]
+  graph G {
+    
+    node[style="state"];
+    a_1 -- a_4;
+    a_1 -- a_5;
+    a_1 -- a_6;
+    
+
+    a_2 -- a_4;
+    a_2 -- a_5;
+    a_2 -- a_6;
+
+    a_3 -- a_4;
+    a_3 -- a_5;
+    a_3 -- a_6;
+    
+  }
+\end{dot2tex}
+\end{tikzpicture}
+
+\section {Petersen's Graph}
+\begin{tikzpicture}
+\tikzstyle{every state}=[shape=circle, draw=black!50, very thick, fill=blue!10];
+
+\begin{dot2tex}[circo,mathmode]
+  graph G {
+    node[style="state"];
+      A -- B;
+      A -- E;
+      A -- F;
+      B -- G;
+      B -- C;
+      C -- H;
+      C -- D;
+      D -- E;
+      D -- I;
+      E -- J;
+      F -- H;
+      F -- I;
+      G -- I;
+      G -- J;
+      H -- J;
+  }
+\end{dot2tex}
+\end{tikzpicture}
+
+\end{document}

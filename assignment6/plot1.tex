@@ -1,0 +1,50 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage{datatool,tikz,filecontents,csvsimple}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+\begin{tikzpicture}[x=0.2cm,y=100cm]
+  \draw[very thin, color=black!40] (-0.1,0) grid (50,0.14);
+  \draw[<->] (-0.5,0) -- (50,0) node [right] {$n$};
+  \draw[<->] (0,0) -- (0,0.14)  node [above] {$pdf$};
+
+\csvreader[ head to column names,%
+                late after head=\xdef\aold{\a}\xdef\bold{\b},%
+                after line=\xdef\aold{\a}\xdef\bold{\b}]%
+                {bin.csv}{}{%
+    \draw[color=red] (\aold, \bold) -- (\a,\b) node {$\times$};
+    }
+
+\csvreader[ head to column names,%
+                late after head=\xdef\aold{\a}\xdef\bold{\b},%
+                after line=\xdef\aold{\a}\xdef\bold{\b}]%
+                {poisson.csv}{}{%
+    \draw[color=orange] (\aold, \bold) -- (\a,\b) node {$\times$};
+    }
+
+\csvreader[ head to column names,%
+                late after head=\xdef\aold{\a}\xdef\bold{\b},%
+                after line=\xdef\aold{\a}\xdef\bold{\b}]%
+                {normal.csv}{}{%
+    \draw[color=green] (\aold, \bold) -- (\a,\b) node {$\times$};
+    }
+\foreach \n in {0,5,10,15,20,25,30,35,40,45,50}
+{
+   \fill (\n,0) circle (1.6pt) node [below=5pt] {${\n}$};
+}
+\foreach \n in {0,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.10,0.11,0.12,0.13,0.14}
+{
+   \fill (0,\n) circle (1.6pt) node [left=2pt] {${\n}$};
+}
+
+
+\draw (45,0.12) 
+   node [fill={blue!10},rounded corners,left,text width=45mm] 
+   { Scale: \\
+     \textcolor{red}    {---------}  Binomial\\
+     \textcolor{orange} {---------}  Poisson \\
+     \textcolor{green}  {---------}  Normal\\
+     On X-axis $1$ unit=$5$\\
+     On Y-axis $1$ unit=$0.02$ };
+\end{tikzpicture}
+\end{document}

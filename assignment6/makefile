@@ -6,7 +6,7 @@ pdf: test.tex plot.tex
 flow: flow.tex	
 	pdflatex -shell-escape flow.tex
 clean:
+	rm *aux
 	rm *log
 	rm *table
 	rm *gnuplot
-	rm *aux

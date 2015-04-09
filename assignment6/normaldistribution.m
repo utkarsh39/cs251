@@ -1,12 +1,12 @@
 pmf=zeros(1,51);
 n=50;
-p=0.3;
+mu=15;
+sig=sqrt(10.5);
 
-t=(1-p)^n;
-file_id = fopen('bin.csv', 'w');
+file_id = fopen('normal.csv', 'w');
 for i=0:50
-	pmf(i+1)=binopdf(i,n,p);
-        
+	pmf(i+1)=normpdf(i,mu,sig);
+
        
 fprintf(file_id,'%i,%f\n',i,pmf(i+1));
 endfor

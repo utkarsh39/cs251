@@ -1,12 +1,12 @@
 pmf=zeros(1,51);
 n=50;
-p=0.3;
+l=15;
 
-t=(1-p)^n;
-file_id = fopen('bin.csv', 'w');
+t=e^(-15);
+file_id = fopen('poisson.csv', 'w');
 for i=0:50
-	pmf(i+1)=binopdf(i,n,p);
-        
+pmf(i+1)=poisspdf(i,l);
+
        
 fprintf(file_id,'%i,%f\n',i,pmf(i+1));
 endfor
