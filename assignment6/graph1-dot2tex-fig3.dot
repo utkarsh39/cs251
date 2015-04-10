@@ -1,0 +1,18 @@
+  graph G {
+    node[style="state"];
+      A -- B;
+      A -- E;
+      A -- F;
+      B -- G;
+      B -- C;
+      C -- H;
+      C -- D;
+      D -- E;
+      D -- I;
+      E -- J;
+      F -- H;
+      F -- I;
+      G -- I;
+      G -- J;
+      H -- J;
+  }
